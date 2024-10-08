@@ -1,0 +1,65 @@
+﻿@using MagicVila_Web.Models.Dto
+@model VailaDto
+<div class="card-header bg-secondary bg-gradient ml-0 py-3">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2 class="text-white py-2">Delete List</h2>
+        </div>
+    </div>
+</div>
+<form method="post" class="row">
+    <input asp-for="Id" type="hidden" />
+    <div class="border p-3  ">
+        <div class="form-floating py-2 col-12">
+            <input asp-for="Name" class="form-control border-0 shadow" maxlength="256" />
+            <label asp-for="Name" class="ms-2"></label>
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-floating py-2 col-12">
+            <input asp-for="sqft" class="form-control border-0 shadow" maxlength="256" />
+            <label asp-for="sqft" class="ms-2"></label>
+            <span asp-validation-for="sqft" class="text-danger"></span>
+        </div>
+        <div class="form-floating py-2 col-12">
+            <input asp-for="ImageUrl" class="form-control border-0 shadow" maxlength="256" />
+            <label asp-for="ImageUrl" class="ms-2"></label>
+            <span asp-validation-for="ImageUrl" class="text-danger"></span>
+        </div>
+        <div class="form-floating py-2 col-12">
+            <input asp-for="Amenity" class="form-control border-0 shadow" maxlength="256" />
+            <label asp-for="Amenity" class="ms-2"></label>
+            <span asp-validation-for="Amenity" class="text-danger"></span>
+        </div>
+        <div class="form-floating py-2 col-12">
+            <input asp-for="Rate" class="form-control border-0 shadow" maxlength="256" />
+            <label asp-for="Rate" class="ms-2"></label>
+            <span asp-validation-for="Rate" class="text-danger"></span>
+        </div>
+        <div class="form-floating py-2 col-12">
+            <input asp-for="Occupancy" class="form-control border-0 shadow" maxlength="256" />
+            <label asp-for="Occupancy" class="ms-2"></label>
+            <span asp-validation-for="Occupancy" class="text-danger"></span>
+        </div>
+        <div class="form-floating py-2 col-12">
+            <input asp-for="Details" class="form-control border-0 shadow" maxlength="256" />
+            <label asp-for="Details" class="ms-2"></label>
+            <span asp-validation-for="Details" class="text-danger"></span>
+        </div>
+
+        <div class="row" pt-2>
+            <div class="col-6 col-md-2">
+                <button type="submit" value="Delete" class="btn btn-outline-danger" style="width:150px">Delete</button>
+            </div>
+
+            <div class="col-6 col-md-2">
+                <a asp-controller="Villa" asp-action="IndexVilla" class="btn btn-outline-secondary" style="width:150px">Back To List</a>
+            </div>
+        </div>
+
+    </div>
+</form>
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

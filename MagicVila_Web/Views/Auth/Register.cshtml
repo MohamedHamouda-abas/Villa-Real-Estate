@@ -1,0 +1,22 @@
+﻿@using MagicVila_Web.Models.Dto
+@model RegisterRequestDto
+<div class="container">
+    <form method="post" class="login-form">
+        <h2>Login</h2>
+        <div class="input-group">
+            <input asp-for="UserName" type="text" id="username" name="username" required>
+            <label for="username">Username</label>
+        </div>
+        <div class="input-group">
+            <input asp-for="Name" type="text" id="Name" name="Name" required>
+            <label for="username">Name</label>
+        </div>
+        <div class="input-group">
+            <input asp-for="PassWord" type="text" id="PassWord" name="PassWord" required>
+            <label for="PassWord">PassWord</label>
+        </div>
+
+        <button type="submit">Log In</button>
+        <p class="message">Not registered? <a href="#">Create an account</a></p>
+    </form>
+</div> 
